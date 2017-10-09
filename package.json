@@ -1,0 +1,47 @@
+{
+  "name": "wayward-bits",
+  "version": "1.0.0",
+  "description": "Custom Map Generation tools",
+  "main": "libs/wayward-bits.js",
+  "scripts": {
+    "test": "nyc mocha",
+    "test:vsc": "nyc mocha -R tap test/**/*.ts || @echo off"
+  },
+  "nyc": {
+    "extension": [
+      ".ts",
+      "tsx"
+    ],
+    "include": [
+      "src/**/*.ts"
+    ],
+    "exclude": [
+      "**/*.d.ts"
+    ],
+    "reporter": [
+      "text-summary",
+      "html"
+    ],
+    "sourceMap": true,
+    "instrument": true,
+    "all": true
+  },
+  "author": "HeinousTugboat <admin@heinous.industries>",
+  "license": "MIT",
+  "dependencies": {
+    "ts-node": "^3.3.0",
+    "typescript": "^2.5.3"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.0.4",
+    "@types/sinon": "^2.3.5",
+    "@types/mocha": "^2.2.43",
+    "chai": "^4.1.2",
+    "istanbul": "^0.4.5",
+    "karma": "^1.7.1",
+    "mocha": "^3.5.3",
+    "nyc": "^11.2.1",
+    "sinon": "^2.3.5",
+    "source-map-support": "^0.4.18"
+  }
+}
